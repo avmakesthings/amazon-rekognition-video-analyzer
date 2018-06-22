@@ -80,8 +80,8 @@ def process_image(event, context):
 
         item = {
             'frame_id': frame_id,
-            'processed_timestamp' : processed_timestamp,
-            'approx_capture_timestamp' : approx_capture_timestamp,
+            'processed_timestamp' : str(processed_timestamp),
+            'approx_capture_timestamp' : str(approx_capture_timestamp),
             'rekog_face_details' : response['FaceDetails'],
             'rekog_orientation_correction' : 
                 response['OrientationCorrection'] 
@@ -91,7 +91,7 @@ def process_image(event, context):
         # Write to stream
         response = kinesis_client.put_record(
             StreamName=output_kinesis_stream,
-            Data=cPickle.dumps(item),
+            Data=json.dumps(item),
             PartitionKey="partitionkey"
         )
 
