@@ -1,8 +1,8 @@
 {
-    "SourceS3BucketParameter" : "<NO-DEFAULT>",
+    "SourceS3BucketParameter" : "barrelofdicks",
     "ImageProcessorSourceS3KeyParameter" : "src/lambda_imageprocessor.zip",
     "FrameFetcherSourceS3KeyParameter" : "src/lambda_framefetcher.zip",
-    "FrameS3BucketNameParameter" : "<NO-DEFAULT>",
+    "FrameS3BucketNameParameter" : "framedump2",
     "FrameFetcherApiResourcePathPart" : "enrichedframe",
     "ApiGatewayRestApiNameParameter" : "VidAnalyzerRestApi",
     "ApiGatewayStageNameParameter": "development",
